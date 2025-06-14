@@ -1,0 +1,39 @@
+{
+  // Biomeを既定のフォーマッターに設定
+  "editor.defaultFormatter": "biomejs.biome",
+
+  // 保存時に自動フォーマット
+  "editor.formatOnSave": true,
+
+  // ペースト時にフォーマット
+  "editor.formatOnPaste": true,
+
+  // 入力時にフォーマット
+  "editor.formatOnType": false,
+
+  // 言語別の設定
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "quickfix.biome": "explicit",
+      "source.organizeImports.biome": "explicit"
+    }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "quickfix.biome": "explicit",
+      "source.organizeImports.biome": "explicit"
+    }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true
+  }
+}
