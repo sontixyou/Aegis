@@ -30,3 +30,7 @@ lerna-debug.log*
 
 # misc
 .DS_Store
+
+
+# Database
+local.db
