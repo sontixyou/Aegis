@@ -5,11 +5,7 @@ import 'dotenv/config';
 import { drizzle } from 'drizzle-orm/libsql';
 import { usersTable } from './db/schema';
 
-const dbFileName = process.env.DB_FILE_NAME;
-if (!dbFileName) {
-  throw new Error('DB_FILE_NAME environment variable is not set.');
-}
-const db = drizzle(dbFileName);
+const db = drizzle(process.env.DB_FILE_NAME);
 const app = new Hono();
 
 app.get('/', (c) => {
@@ -30,7 +26,7 @@ app.post('/user', async (c) => {
 serve(
   {
     fetch: app.fetch,
-    port: 3000,
+    port: Number(process.env.PORT) || 3000,
   },
   (info) => {
     console.log(`Server is running on http://localhost:${info.port}`);
