@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "strict": true,
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
     "types": [
       "node"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
     ],
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx",
