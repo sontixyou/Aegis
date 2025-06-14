@@ -10,8 +10,8 @@ declare global {
   namespace NodeJS {
     interface ProcessEnv {
       DB_FILE_NAME: string;
-      PORT?: string;
-      NODE_ENV?: 'development' | 'production' | 'test';
+      PORT: string;
+      NODE_ENV: 'development' | 'production' | 'test';
     }
   }
 }
