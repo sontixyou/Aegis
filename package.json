@@ -5,6 +5,7 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
+    "commit": "git-cz-api",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "format": "biome format --write ."
@@ -16,7 +17,13 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/node": "^20.11.17",
+    "git-cz-for-api-developer": "^1.0.4",
     "tsx": "^4.7.1",
     "typescript": "^5.8.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz-for-api-developer"
+    }
   }
 }
